@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contents</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="content.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="top-nav">
+                <a href="h1.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="land.html">Content</a>
+                <a href="feedback.html" style="float: center;">Feedback</a>
+            </div>
+        </div>
+        <button class="tablink" onclick="openPage('Home', this, 'white')">Land resources</button>
+        <div id="Home" class="tabcontent">
+            <div class=" container1">
+                <img src="sa.png">
+                <p>Our website acts as a knowledge repository, unraveling the complexities of land resources. By offering insightful articles and interactive tools, we empower users to comprehend the vital role land plays in our lives. From ecological importance to sustainable utilization, we provide essential information, fostering a deeper appreciation for the diverse landscapes that shape our world.<br><a href="h1.html" style="text-decoration: none;"><button class="button"><span>Learn More </span></button></a></p>
+            </div>
+        <script>
+            function openPage(pageName,elmnt,color) {
+              var i, tabcontent, tablinks;
+              tabcontent = document.getElementsByClassName("tabcontent");
+              for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+              }
+              tablinks = document.getElementsByClassName("tablink");
+              for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+              }
+              document.getElementById(pageName).style.display = "block";
+              elmnt.style.backgroundColor = color;
+            }
+
+            // Get the element with id="defaultOpen" and click on it
+            document.getElementById("defaultOpen").click();
+            </script>
+    </body>
+</html>
